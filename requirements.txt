@@ -1,0 +1,6 @@
+# Stake Bonus Drop Tracker — dependencies (deliberately minimal)
+# Validation uses a dependency-free raw GraphQL client modeled on the
+# verified queries from https://github.com/brokechubb/StakeAPI
+# (do NOT pip-install the stale third-party "stakeapi" from PyPI).
+aiohttp>=3.9.0
+rich>=13.0.0

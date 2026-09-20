@@ -1,0 +1,75 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Stake Bonus Drop Tracker — CodeStats.gg edition",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any (Python 3.8+)",
+      "url": "https://github.com/brokechubb/stake-bonus-drop-tracker",
+      "author": { "@type": "Person", "name": "brokechubb" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CodeStats.gg",
+        "url": "https://codestats.gg"
+      },
+      "license": "https://opensource.org/licenses/MIT",
+      "description": "Free, open-source Stake code drop tracker: monitors public Telegram drop channels, validates active Stake bonus codes via the official GraphQL API, and publishes Stake bonus drop history and stats as a public dataset refreshed every 15 minutes. Tracking companion to the CodeStats.gg Stake bonus code claimer suite.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "keywords": "stake bonus code claimer, active stake codes, stake code drop tracker, stake telegram drop monitor script, stake bonus drop history and stats, stake vip bonus drop analytics, codestats.gg stake drop tracker"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why do Stake bonus drops expire so fast?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Stake bonus drops are multi-use but redemption-capped and served first-come, first-served. Popular drops are exhausted within seconds, which is why automated claimers like the CodeStats.gg Cloud Claimer pre-cache Cloudflare Turnstile tokens and claim via direct GraphQL."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I automate Telegram drop scraping?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use this repository's TelegramPublicSource, which scrapes public t.me/s/<channel> web previews with zero API keys and is safe to run in GitHub Actions every 15 minutes. Production-grade alternatives include Telethon userbots with OCR and the CodeStats.gg WebSocket push feed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this a Stake bonus code claimer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. This free tool tracks, validates and records Stake bonus codes. Auto-claiming is handled by the CodeStats.gg auto-claimer suite (browser userscript) and Cloud Claimer (hosted 24/7) at https://codestats.gg"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a limit on Stake bonus code claims?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Stake caps bonus code claims at 10 per day, resetting at UTC midnight. CodeStats.gg tracks your usage and filters low-value codes so every claim counts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do Stake bonus codes fail?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Common failures: bonusCodeInactive (redemption cap reached), alreadyClaimed (per-account limit), weekly wager requirement not met, withdrawError (no deposit in the drop currency), emailUnverified/KYC restrictions, and dropUnavailable (window closed)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a Stake reload claimer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A tool that automatically claims the VIP reload bonus available every 10 minutes. The free 'Auto Reload on Stake.com - CodeStats edition' userscript on GreasyFork claims reloads and daily bonuses via direct GraphQL calls, with optional auto-vault."
+          }
+        }
+      ]
+    }
+  ]
+}

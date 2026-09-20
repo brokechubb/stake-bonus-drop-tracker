@@ -1,0 +1,23 @@
+# Local secrets — NEVER commit. Copy config.example.json instead.
+config.json
+.env
+
+# Internal publishing playbook — local only, not part of the public repo
+DISTRIBUTION.md
+
+# Runtime databases / logs
+*.db
+*.sqlite3
+*.log
+data/*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.mypy_cache/
+.pytest_cache/
+dist/
+build/
+*.egg-info/

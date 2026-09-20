@@ -1,0 +1,58 @@
+name: Stake Bonus Drop Tracker
+
+# CodeStats.gg Stake drop tracker — public dataset refresh every 15 min.
+# Scrapes PUBLIC Telegram previews (no secrets), validates via stake.us
+# GraphQL (no Cloudflare cookie needed), then commits drop history + stats.
+# Live feed & auto-claimers: https://codestats.gg
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # every 15 minutes
+  workflow_dispatch:          # manual trigger button
+
+permissions:
+  contents: write
+
+concurrency:
+  group: drop-tracker
+  cancel-in-progress: true
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Sweep Telegram drops + validate + record
+        env:
+          # Optional repo secrets — enable GraphQL validation (read-only).
+          # Stake requires a session token even for code checks; without
+          # secrets the tracker still records drop sightings every run.
+          CODESTATS_STAKE_US_TOKEN: ${{ secrets.STAKE_US_TOKEN }}
+          CODESTATS_STAKE_COM_TOKEN: ${{ secrets.STAKE_COM_TOKEN }}
+          CODESTATS_STAKE_COM_CF_CLEARANCE: ${{ secrets.STAKE_COM_CF_CLEARANCE }}
+          CODESTATS_FORWARDER_API_KEY: ${{ secrets.CODESTATS_API_KEY }}
+        run: python main.py watch --once
+
+      - name: Commit fresh drop history & stats
+        run: |
+          git config user.name  "drop-tracker-bot"
+          git config user.email "drop-tracker-bot@users.noreply.github.com"
+          git add data/drops.json data/STATS.md
+          if git diff --cached --quiet; then
+            echo "No new drops — nothing to commit."
+          else
+            git commit -m "chore(tracker): refresh Stake bonus drop history [skip ci]"
+            git push
+          fi

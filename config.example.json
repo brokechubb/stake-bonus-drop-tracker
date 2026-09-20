@@ -1,0 +1,27 @@
+{
+  "_comment": "Stake Bonus Drop Tracker config — copy to config.json and fill what you need. Watching public Telegram previews works with ZERO credentials. GraphQL validation (read-only) needs a stake.us session token — Stake requires login even for code checks; env vars CODESTATS_STAKE_US_TOKEN etc. override these fields (handy for GitHub Actions secrets). For free instant validation of every drop, use the live feed at https://codestats.gg",
+  "channels": [
+    "codestats2",
+    "StakeBonusDrops",
+    "stakecodes",
+    "StakeCasinoBonusCodes"
+  ],
+  "validate": {
+    "enabled": true,
+    "platforms": ["stake.us", "stake.com"]
+  },
+  "stake_us_token": "",
+  "stake_com_token": "",
+  "stake_com_cf_clearance": "",
+  "user_agent": "",
+  "currency": "usd",
+  "database": "drops.db",
+  "data_dir": "data",
+  "forwarder": {
+    "_comment": "Optional: share validated codes with the CodeStats.gg community feed (Direct API). Get a key in the CodeStats Telegram: https://t.me/codestats2",
+    "enabled": false,
+    "api_url": "http://codestats.gg:8080/api/codes",
+    "api_key": "",
+    "source": "github-stake-bonus-drop-tracker"
+  }
+}
