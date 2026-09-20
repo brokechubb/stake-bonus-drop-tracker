@@ -56,8 +56,10 @@ Open a PR describing: what it tracks, why it's CI-safe, and example output.
 - **Direct API (community submissions):** `POST http://codestats.gg:8080/api/codes`
   with `x-api-key` header — see `tracker/forwarder.py`. Request a key in
   the [CodeStats Telegram](https://t.me/codestats2).
-- **GraphQL validation:** done via [`stakeapi`](https://github.com/brokechubb/StakeAPI)
-  (`pip install stakeapi`) — issues/PRs about the API layer belong there.
+- **GraphQL validation:** done via the raw queries from
+  [`StakeAPI`](https://github.com/brokechubb/StakeAPI)
+  (`pip install stakeapi-codestats`) — issues/PRs about the API layer
+  belong there.
 - **Live WebSocket feed / claimers:** closed-source, served at
   [codestats.gg](https://codestats.gg) — the tracker intentionally does not
   implement claiming.

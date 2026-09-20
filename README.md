@@ -354,7 +354,7 @@ wire `tracker/forwarder.py` into your own claimer if you're building one.
 | **CodeStats.gg** | Live Stake/Shuffle code feed, cloud + browser auto-claimers, drop analytics | [codestats.gg](https://codestats.gg) |
 | **CodeStats Telegram** | The original free live drop feed — 1,300+ daily users | [t.me/codestats2](https://t.me/codestats2) |
 | **Auto Reload claimer** | Free userscript: 10-min reloads, daily bonus, auto-vault | [GreasyFork #546623](https://greasyfork.org/en/scripts/546623-auto-reload-on-stake-com-codestats-edition) |
-| **StakeAPI** | Unofficial async Python wrapper for the Stake GraphQL API (`pip install stakeapi`) | [github.com/brokechubb/StakeAPI](https://github.com/brokechubb/StakeAPI) |
+| **StakeAPI** | Unofficial async Python wrapper for the Stake GraphQL API (`pip install stakeapi-codestats`) | [github.com/brokechubb/StakeAPI](https://github.com/brokechubb/StakeAPI) |
 
 ---
 
