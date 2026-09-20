@@ -47,10 +47,10 @@ class Config:
         """Load config.json (env: CODESTATS_TRACKER_CONFIG). Missing file is fine."""
         path = path or os.environ.get("CODESTATS_TRACKER_CONFIG", "config.json")
         cfg = cls()
-        if not os.path.isfile(path):
-            return cfg
-        with open(path, "r", encoding="utf-8") as fh:
-            raw = json.load(fh)
+        raw = {}
+        if os.path.isfile(path):
+            with open(path, "r", encoding="utf-8") as fh:
+                raw = json.load(fh)
         cfg.channels = raw.get("channels", cfg.channels)
         validate = raw.get("validate", {})
         cfg.validate_enabled = validate.get("enabled", cfg.validate_enabled)

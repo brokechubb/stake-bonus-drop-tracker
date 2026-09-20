@@ -157,6 +157,11 @@ async def _check_on_platform(code: str, platform: str, cfg) -> ValidationResult:
             return ValidationResult(code=code, platform=platform,
                                     status="unverified",
                                     error=f"token rejected: {msg}")
+        if etype in ("notFound", "bonusCodeInactive", "alreadyClaimed",
+                     "dropUnavailable", "bonusCodeActive"):
+            # Verified session + definitive code state → real status.
+            return ValidationResult(code=code, platform=platform,
+                                    status=etype, error=msg)
         return ValidationResult(code=code, platform=platform,
                                 status="error", error=msg)
 
