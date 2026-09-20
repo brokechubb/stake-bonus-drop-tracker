@@ -116,6 +116,10 @@ watches public Telegram channels through the web preview endpoint
 - Code extraction tuned for real Stake drop formats (labeled `- Code:`
   patterns and `?code=` claim URLs, stopword filtering, case-preserving
   matching)
+- **Brand-aware filtering** — mixed channels (like the CodeStats feed)
+  also broadcast Shuffle and Thrill drops; those codes are not
+  interchangeable with Stake codes, so they're detected and skipped
+  automatically (`brands` in config.json)
 - Source attribution — every candidate keeps its channel + `t.me` permalink
 
 Default channels include `codestats2` (the official CodeStats.gg feed —

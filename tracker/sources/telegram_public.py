@@ -23,7 +23,7 @@ from typing import AsyncIterator
 
 import aiohttp
 
-from .base import Candidate, CodeSource, extract_codes, strip_html
+from .base import Candidate, CodeSource, detect_brand, extract_codes, strip_html
 
 # Chrome-like UA: t.me/s renders the full widget HTML for modern browsers.
 DEFAULT_UA = (
@@ -99,6 +99,7 @@ class TelegramPublicSource(CodeSource):
                         message_url=permalink,
                         message_text=text[:400],
                         seen_at=seen_at,
+                        brand=detect_brand(text),
                     )
                 )
         return out

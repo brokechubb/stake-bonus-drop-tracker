@@ -6,6 +6,7 @@
     "stakecodes",
     "StakeCasinoBonusCodes"
   ],
+  "brands": ["stake"],
   "validate": {
     "enabled": true,
     "platforms": ["stake.us", "stake.com"]

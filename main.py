@@ -78,13 +78,18 @@ async def cmd_watch(cfg: Config, once: bool, interval: int) -> int:
     if seeded:
         console.print(f"[dim]Seeded {seeded} rows from existing dataset[/]")
     while True:
-        candidates, results = [], []
+        candidates, results, skipped_brands = [], [], 0
         console.print(f"[dim]Sweeping {len(cfg.channels)} Telegram channels…[/]")
         seen: set = set()
         async for cand in source.fetch():
-            if (cand.code) in seen:
+            if cand.code in seen:
                 continue
             seen.add(cand.code)
+            # Mixed channels (e.g. the CodeStats feed) also broadcast
+            # Shuffle / Thrill drops — only track the configured brands.
+            if cand.brand not in cfg.brands:
+                skipped_brands += 1
+                continue
             candidates.append(cand)
 
         if cfg.validate_enabled:
@@ -122,6 +127,7 @@ async def cmd_watch(cfg: Config, once: bool, interval: int) -> int:
                               f"[dim]{r.platform} value={r.bonus_value}[/]")
         console.print(
             f"[dim]{len(candidates)} candidates · "
+            f"{skipped_brands} non-{'+'.join(cfg.brands)} drops skipped · "
             f"{sum(1 for r in results if r.is_active)} active · "
             f"{history.totals()[0]} tracked all-time[/]")
 

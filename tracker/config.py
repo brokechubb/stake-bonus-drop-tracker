@@ -29,6 +29,7 @@ class ForwarderConfig:
 @dataclass
 class Config:
     channels: list = field(default_factory=lambda: list(DEFAULT_CHANNELS))
+    brands: list = field(default_factory=lambda: ["stake"])
     validate_enabled: bool = True
     platforms: list = field(
         default_factory=lambda: ["stake.us", "stake.com"]
@@ -52,6 +53,7 @@ class Config:
             with open(path, "r", encoding="utf-8") as fh:
                 raw = json.load(fh)
         cfg.channels = raw.get("channels", cfg.channels)
+        cfg.brands = raw.get("brands", cfg.brands)
         validate = raw.get("validate", {})
         cfg.validate_enabled = validate.get("enabled", cfg.validate_enabled)
         cfg.platforms = validate.get("platforms", cfg.platforms)

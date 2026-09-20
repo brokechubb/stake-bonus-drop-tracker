@@ -25,7 +25,7 @@ BADWORDS = {
     "in", "on", "to", "and", "is", "are", "was", "get", "use", "enter",
     "your", "our", "new", "not", "no", "alert", "alerts", "post", "sent",
     "link", "page", "us", "com", "gg", "www", "type", "value", "claim",
-    "code", "codes",
+    "code", "codes", "attached", "below", "above",
 }
 
 
@@ -38,6 +38,7 @@ class Candidate:
     message_url: str = ""
     message_text: str = ""
     seen_at: str = ""          # ISO-8601 UTC
+    brand: str = "unknown"     # casino the drop targets (stake/shuffle/thrill)
     platforms: list = field(default_factory=list)  # filled by validator
 
     def __post_init__(self):
@@ -53,6 +54,24 @@ class Candidate:
         if c.lower() in BADWORDS:
             return False
         return True
+
+
+def detect_brand(text: str) -> str:
+    """Classify which casino a drop message targets.
+
+    Mixed channels (like the CodeStats feed) broadcast drops for several
+    casinos — Shuffle, Thrill, Stake — and their codes are NOT
+    interchangeable. Non-stake mentions win over stake so cross-branded
+    boilerplate never leaks a foreign code into the Stake dataset.
+    """
+    t = (text or "").lower()
+    if "thrill" in t:
+        return "thrill"
+    if "shuffle" in t:
+        return "shuffle"
+    if "stake" in t:
+        return "stake"
+    return "unknown"
 
 
 def extract_codes(text: str) -> list[str]:
