@@ -72,6 +72,11 @@ async def cmd_watch(cfg: Config, once: bool, interval: int) -> int:
     """Monitor public Telegram channels → extract → validate → record."""
     source = TelegramPublicSource(cfg.channels, user_agent=cfg.user_agent)
     history = History(cfg.database)
+    # Carry forward the committed dataset so history accumulates across CI
+    # runs (fresh checkout = fresh drops.db) instead of resetting each sweep.
+    seeded = history.seed_from_json(os.path.join(cfg.data_dir, "drops.json"))
+    if seeded:
+        console.print(f"[dim]Seeded {seeded} rows from existing dataset[/]")
     while True:
         candidates, results = [], []
         console.print(f"[dim]Sweeping {len(cfg.channels)} Telegram channels…[/]")

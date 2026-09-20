@@ -25,6 +25,7 @@ BADWORDS = {
     "in", "on", "to", "and", "is", "are", "was", "get", "use", "enter",
     "your", "our", "new", "not", "no", "alert", "alerts", "post", "sent",
     "link", "page", "us", "com", "gg", "www", "type", "value", "claim",
+    "code", "codes",
 }
 
 

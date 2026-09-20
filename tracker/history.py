@@ -74,6 +74,38 @@ class History:
             (utcnow(), channels, candidates, active),
         )
 
+    def seed_from_json(self, path: str) -> int:
+        """Load a previously exported dataset (e.g. the one committed to this
+        repo) into a fresh DB, so history accumulates across CI runs instead
+        of resetting to the latest sweep. Existing rows are never overwritten.
+        Returns the number of rows seeded."""
+        if not os.path.isfile(path):
+            return 0
+        try:
+            with open(path, "r", encoding="utf-8") as fh:
+                payload = json.load(fh)
+            rows = payload.get("drops", [])
+        except (ValueError, OSError):
+            return 0
+        seeded = 0
+        for r in rows:
+            cur = self.conn.execute(
+                """INSERT OR IGNORE INTO drops (code, platform, status,
+                     bonus_value, multiplier, source_channel, message_url,
+                     first_seen, last_seen)
+                   VALUES (?,?,?,?,?,?,?,?,?)""",
+                (r.get("code", ""), r.get("platform", ""),
+                 r.get("status", "unverified"), r.get("bonus_value"),
+                 r.get("multiplier"), r.get("source_channel", ""),
+                 r.get("message_url", ""),
+                 r.get("first_seen", utcnow()),
+                 r.get("last_seen", utcnow())),
+            )
+            seeded += cur.rowcount
+        if seeded:
+            self.conn.commit()
+        return seeded
+
     def commit(self):
         self.conn.commit()
 
