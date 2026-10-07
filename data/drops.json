@@ -1,14 +1,190 @@
 {
   "generator": "stake-bonus-drop-tracker (CodeStats.gg edition)",
   "homepage": "https://codestats.gg",
-  "updated": "2026-10-06T23:57:11+00:00",
+  "updated": "2026-10-07T04:46:08+00:00",
   "totals": {
-    "codes_tracked": 796,
+    "codes_tracked": 806,
     "active_now": 0
   },
   "note": "Free dataset from the open-source Stake code drop tracker. For real-time feeds and auto-claiming, visit https://codestats.gg",
   "drops": [
     {
+      "code": "lemon9y88",
+      "platform": "stake.us",
+      "status": "unverified",
+      "bonus_value": null,
+      "multiplier": null,
+      "source_channel": "codestats2",
+      "message_url": "https://t.me/codestats2/27386",
+      "first_seen": "2026-10-06T23:57:11+00:00",
+      "last_seen": "2026-10-07T04:46:08+00:00"
+    },
+    {
+      "code": "lemon9y88",
+      "platform": "stake.com",
+      "status": "unverified",
+      "bonus_value": null,
+      "multiplier": null,
+      "source_channel": "codestats2",
+      "message_url": "https://t.me/codestats2/27386",
+      "first_seen": "2026-10-06T23:57:11+00:00",
+      "last_seen": "2026-10-07T04:46:08+00:00"
+    },
+    {
+      "code": "stakecom174y3rfe5awx8t",
+      "platform": "stake.us",
+      "status": "unverified",
+      "bonus_value": null,
+      "multiplier": null,
+      "source_channel": "codestats2",
+      "message_url": "https://t.me/codestats2/27385",
+      "first_seen": "2026-10-06T23:57:11+00:00",
+      "last_seen": "2026-10-07T04:46:08+00:00"
+    },
+    {
+      "code": "stakecom174y3rfe5awx8t",
+      "platform": "stake.com",
+      "status": "unverified",
+      "bonus_value": null,
+      "multiplier": null,
+      "source_channel": "codestats2",
+      "message_url": "https://t.me/codestats2/27385",
+      "first_seen": "2026-10-06T23:57:11+00:00",
+      "last_seen": "2026-10-07T04:46:08+00:00"
+    },
+    {
+      "code": "stakeus9ejell1j9kipak",
+      "platform": "stake.us",
+      "status": "unverified",
+      "bonus_value": null,
+      "multiplier": null,
+      "source_channel": "codestats2",
+      "message_url": "https://t.me/codestats2/27387",
+      "first_seen": "2026-10-06T23:57:11+00:00",
+      "last_seen": "2026-10-07T04:46:08+00:00"
+    },
+    {
+      "code": "stakeus9ejell1j9kipak",
+      "platform": "stake.com",
+      "status": "unverified",
+      "bonus_value": null,
+      "multiplier": null,
+      "source_channel": "codestats2",
+      "message_url": "https://t.me/codestats2/27387",
+      "first_seen": "2026-10-06T23:57:11+00:00",
+      "last_seen": "2026-10-07T04:46:08+00:00"
+    },
+    {
+      "code": "stakeplz0g0c943v4m3q2",
+      "platform": "stake.us",
+      "status": "unverified",
+      "bonus_value": null,
+      "multiplier": null,
+      "source_channel": "codestats2",
+      "message_url": "https://t.me/codestats2/27391",
+      "first_seen": "2026-10-07T04:46:08+00:00",
+      "last_seen": "2026-10-07T04:46:08+00:00"
+    },
+    {
+      "code": "stakeplz0g0c943v4m3q2",
+      "platform": "stake.com",
+      "status": "unverified",
+      "bonus_value": null,
+      "multiplier": null,
+      "source_channel": "codestats2",
+      "message_url": "https://t.me/codestats2/27391",
+      "first_seen": "2026-10-07T04:46:08+00:00",
+      "last_seen": "2026-10-07T04:46:08+00:00"
+    },
+    {
+      "code": "special2y66",
+      "platform": "stake.us",
+      "status": "unverified",
+      "bonus_value": null,
+      "multiplier": null,
+      "source_channel": "codestats2",
+      "message_url": "https://t.me/codestats2/27394",
+      "first_seen": "2026-10-07T04:46:08+00:00",
+      "last_seen": "2026-10-07T04:46:08+00:00"
+    },
+    {
+      "code": "special2y66",
+      "platform": "stake.com",
+      "status": "unverified",
+      "bonus_value": null,
+      "multiplier": null,
+      "source_channel": "codestats2",
+      "message_url": "https://t.me/codestats2/27394",
+      "first_seen": "2026-10-07T04:46:08+00:00",
+      "last_seen": "2026-10-07T04:46:08+00:00"
+    },
+    {
+      "code": "stakecom693u6d5hgvd5bf",
+      "platform": "stake.us",
+      "status": "unverified",
+      "bonus_value": null,
+      "multiplier": null,
+      "source_channel": "codestats2",
+      "message_url": "https://t.me/codestats2/27396",
+      "first_seen": "2026-10-07T04:46:08+00:00",
+      "last_seen": "2026-10-07T04:46:08+00:00"
+    },
+    {
+      "code": "stakecom693u6d5hgvd5bf",
+      "platform": "stake.com",
+      "status": "unverified",
+      "bonus_value": null,
+      "multiplier": null,
+      "source_channel": "codestats2",
+      "message_url": "https://t.me/codestats2/27396",
+      "first_seen": "2026-10-07T04:46:08+00:00",
+      "last_seen": "2026-10-07T04:46:08+00:00"
+    },
+    {
+      "code": "stakecomjf722yzb7pulh6",
+      "platform": "stake.us",
+      "status": "unverified",
+      "bonus_value": null,
+      "multiplier": null,
+      "source_channel": "codestats2",
+      "message_url": "",
+      "first_seen": "2026-10-07T04:46:08+00:00",
+      "last_seen": "2026-10-07T04:46:08+00:00"
+    },
+    {
+      "code": "stakecomjf722yzb7pulh6",
+      "platform": "stake.com",
+      "status": "unverified",
+      "bonus_value": null,
+      "multiplier": null,
+      "source_channel": "codestats2",
+      "message_url": "",
+      "first_seen": "2026-10-07T04:46:08+00:00",
+      "last_seen": "2026-10-07T04:46:08+00:00"
+    },
+    {
+      "code": "stakeuso30u6ocy3xnzdu",
+      "platform": "stake.us",
+      "status": "unverified",
+      "bonus_value": null,
+      "multiplier": null,
+      "source_channel": "codestats2",
+      "message_url": "https://t.me/codestats2/27395",
+      "first_seen": "2026-10-07T04:46:08+00:00",
+      "last_seen": "2026-10-07T04:46:08+00:00"
+    },
+    {
+      "code": "stakeuso30u6ocy3xnzdu",
+      "platform": "stake.com",
+      "status": "unverified",
+      "bonus_value": null,
+      "multiplier": null,
+      "source_channel": "codestats2",
+      "message_url": "https://t.me/codestats2/27395",
+      "first_seen": "2026-10-07T04:46:08+00:00",
+      "last_seen": "2026-10-07T04:46:08+00:00"
+    },
+    {
       "code": "stakecomnpeat5yrbkhkrr",
       "platform": "stake.us",
       "status": "unverified",
@@ -141,28 +317,6 @@
       "last_seen": "2026-10-06T23:57:11+00:00"
     },
     {
-      "code": "lemon9y88",
-      "platform": "stake.us",
-      "status": "unverified",
-      "bonus_value": null,
-      "multiplier": null,
-      "source_channel": "codestats2",
-      "message_url": "https://t.me/codestats2/27386",
-      "first_seen": "2026-10-06T23:57:11+00:00",
-      "last_seen": "2026-10-06T23:57:11+00:00"
-    },
-    {
-      "code": "lemon9y88",
-      "platform": "stake.com",
-      "status": "unverified",
-      "bonus_value": null,
-      "multiplier": null,
-      "source_channel": "codestats2",
-      "message_url": "https://t.me/codestats2/27386",
-      "first_seen": "2026-10-06T23:57:11+00:00",
-      "last_seen": "2026-10-06T23:57:11+00:00"
-    },
-    {
       "code": "stakecomiexdvoiymi3lyc",
       "platform": "stake.us",
       "status": "unverified",
@@ -181,50 +335,6 @@
       "multiplier": null,
       "source_channel": "codestats2",
       "message_url": "https://t.me/codestats2/27381",
-      "first_seen": "2026-10-06T23:57:11+00:00",
-      "last_seen": "2026-10-06T23:57:11+00:00"
-    },
-    {
-      "code": "stakecom174y3rfe5awx8t",
-      "platform": "stake.us",
-      "status": "unverified",
-      "bonus_value": null,
-      "multiplier": null,
-      "source_channel": "codestats2",
-      "message_url": "https://t.me/codestats2/27385",
-      "first_seen": "2026-10-06T23:57:11+00:00",
-      "last_seen": "2026-10-06T23:57:11+00:00"
-    },
-    {
-      "code": "stakecom174y3rfe5awx8t",
-      "platform": "stake.com",
-      "status": "unverified",
-      "bonus_value": null,
-      "multiplier": null,
-      "source_channel": "codestats2",
-      "message_url": "https://t.me/codestats2/27385",
-      "first_seen": "2026-10-06T23:57:11+00:00",
-      "last_seen": "2026-10-06T23:57:11+00:00"
-    },
-    {
-      "code": "stakeus9ejell1j9kipak",
-      "platform": "stake.us",
-      "status": "unverified",
-      "bonus_value": null,
-      "multiplier": null,
-      "source_channel": "codestats2",
-      "message_url": "https://t.me/codestats2/27387",
-      "first_seen": "2026-10-06T23:57:11+00:00",
-      "last_seen": "2026-10-06T23:57:11+00:00"
-    },
-    {
-      "code": "stakeus9ejell1j9kipak",
-      "platform": "stake.com",
-      "status": "unverified",
-      "bonus_value": null,
-      "multiplier": null,
-      "source_channel": "codestats2",
-      "message_url": "https://t.me/codestats2/27387",
       "first_seen": "2026-10-06T23:57:11+00:00",
       "last_seen": "2026-10-06T23:57:11+00:00"
     },
