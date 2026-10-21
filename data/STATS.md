@@ -9,7 +9,7 @@
 | Unique codes tracked | **1394** |
 | Active right now | **0** |
 | Drops by platform | `stake.us`: 697, `stake.com`: 697 |
-| Last scan | 2026-10-20T22:31:26+00:00 — 13 candidates, 0 active |
+| Last scan | 2026-10-21T00:57:42+00:00 — 10 candidates, 0 active |
 
 ## Drop activity by hour (UTC)
 
@@ -56,4 +56,4 @@ users run the [Cloud Claimer](https://codestats.gg/cloud) or the
 [Standard Claimer userscript](https://codestats.gg/autoclaimer),
 which claim the instant a code drops.
 
-_Updated 2026-10-20T22:31:26+00:00_
+_Updated 2026-10-21T00:57:42+00:00_
