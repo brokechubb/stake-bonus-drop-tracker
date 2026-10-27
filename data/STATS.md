@@ -6,10 +6,10 @@
 
 | Metric | Value |
 |---|---|
-| Unique codes tracked | **1712** |
+| Unique codes tracked | **1720** |
 | Active right now | **0** |
-| Drops by platform | `stake.us`: 856, `stake.com`: 856 |
-| Last scan | 2026-10-27T19:34:54+00:00 — 9 candidates, 0 active |
+| Drops by platform | `stake.us`: 860, `stake.com`: 860 |
+| Last scan | 2026-10-27T23:12:09+00:00 — 10 candidates, 0 active |
 
 ## Drop activity by hour (UTC)
 
@@ -19,14 +19,14 @@
 | 14:00 | 136 | ████████████████████████ |
 | 05:00 | 128 | ████████████████████████ |
 | 08:00 | 126 | ████████████████████████ |
+| 23:00 | 122 | ████████████████████████ |
 | 15:00 | 118 | ████████████████████████ |
-| 23:00 | 114 | ████████████████████████ |
 
 ## Channel leaderboard
 
 | Channel | Drops |
 |---|---|
-| [`codestats2`](https://t.me/s/codestats2) | 1712 |
+| [`codestats2`](https://t.me/s/codestats2) | 1720 |
 
 ## Drops per day
 
@@ -45,7 +45,7 @@
 | 2026-10-24 | 58 |
 | 2026-10-25 | 36 |
 | 2026-10-26 | 56 |
-| 2026-10-27 | 32 |
+| 2026-10-27 | 40 |
 
 ## Why do Stake bonus drops expire so fast?
 
@@ -56,4 +56,4 @@ users run the [Cloud Claimer](https://codestats.gg/cloud) or the
 [Standard Claimer userscript](https://codestats.gg/autoclaimer),
 which claim the instant a code drops.
 
-_Updated 2026-10-27T19:34:55+00:00_
+_Updated 2026-10-27T23:12:09+00:00_
