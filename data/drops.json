@@ -1,13 +1,57 @@
 {
   "generator": "stake-bonus-drop-tracker (CodeStats.gg edition)",
   "homepage": "https://codestats.gg",
-  "updated": "2026-10-30T02:35:02+00:00",
+  "updated": "2026-10-30T08:59:43+00:00",
   "totals": {
-    "codes_tracked": 1828,
+    "codes_tracked": 1832,
     "active_now": 0
   },
   "note": "Free dataset from the open-source Stake code drop tracker. For real-time feeds and auto-claiming, visit https://codestats.gg",
   "drops": [
+    {
+      "code": "stakecomwk1csnv5tokgyu",
+      "platform": "stake.us",
+      "status": "unverified",
+      "bonus_value": null,
+      "multiplier": null,
+      "source_channel": "codestats2",
+      "message_url": "https://t.me/codestats2/28429",
+      "first_seen": "2026-10-30T08:59:43+00:00",
+      "last_seen": "2026-10-30T08:59:43+00:00"
+    },
+    {
+      "code": "stakecomwk1csnv5tokgyu",
+      "platform": "stake.com",
+      "status": "unverified",
+      "bonus_value": null,
+      "multiplier": null,
+      "source_channel": "codestats2",
+      "message_url": "https://t.me/codestats2/28429",
+      "first_seen": "2026-10-30T08:59:43+00:00",
+      "last_seen": "2026-10-30T08:59:43+00:00"
+    },
+    {
+      "code": "stakeusog49odhv8eos6x",
+      "platform": "stake.us",
+      "status": "unverified",
+      "bonus_value": null,
+      "multiplier": null,
+      "source_channel": "codestats2",
+      "message_url": "https://t.me/codestats2/28427",
+      "first_seen": "2026-10-30T08:59:43+00:00",
+      "last_seen": "2026-10-30T08:59:43+00:00"
+    },
+    {
+      "code": "stakeusog49odhv8eos6x",
+      "platform": "stake.com",
+      "status": "unverified",
+      "bonus_value": null,
+      "multiplier": null,
+      "source_channel": "codestats2",
+      "message_url": "https://t.me/codestats2/28427",
+      "first_seen": "2026-10-30T08:59:43+00:00",
+      "last_seen": "2026-10-30T08:59:43+00:00"
+    },
     {
       "code": "stakecomp3ix9ddqvuk8zg",
       "platform": "stake.us",
